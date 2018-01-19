@@ -5,7 +5,7 @@
     <authorEmail>info@tristandeboer.nl</authorEmail
     <creationDate>19 januari 2018</creationDate>
     <copyright>Copyright 2018 Tristan de Boer</copyright>
-    <license>Licensed under MIT Licence</license>
+    <license>GNU/GPL, see LICENSE.md</license>
     <version>1.0.1</version>
     <description>
       <img src="../modules/mod_rss_feed/images/logo.png" alt="Scouting Nederland" class="module-thumb" style="float:right" />
