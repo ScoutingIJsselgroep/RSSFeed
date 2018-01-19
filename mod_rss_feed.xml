@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Scouting RSS Feed</name>
+    <author>Tristan de Boer</author>
+    <version>1.0.1</version>
+    <description>Een RSS-feed module voor de verschillende mediabronnen.</description>
+    <files>
+        <filename>mod_rss_feed.xml</filename>
+        <filename module="mod_rss_feed">mod_rss_feed.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+	<fields name="params">
+		<fieldset name="mailchimp" label="Mailchimp">
+      <field name="mailchimp-feed" type="text" label="Mailchimp RSS URI" description="Vul hier de RSS feed van je Mailchimp in." />
+      <field name="mailchimp-feed-number" type="number" label="Mailchimp RSS Limit" description="Hoeveel berichten wil je maximaal tonen?" default="5" />
+		</fieldset>
+    <fieldset name="instagram" label="Instagram">
+      <field name="instagram-feed" type="text" label="Instagram RSS URI" description="Vul hier de RSS feed van je Instagram in." />
+      <field name="instagram-feed-number" type="number" label="Instagram RSS Limit" description="Hoeveel berichten wil je maximaal tonen?" default="5" />
+		</fieldset>
+	</fields>
+    </config>
+</extension>
