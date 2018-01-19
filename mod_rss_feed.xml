@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.1.0" client="site" method="upgrade">
+<extension type="module" version="3.5.0" client="site" method="upgrade">
     <name>Scouting RSS Feed</name>
     <author>Tristan de Boer</author>
+    <authorEmail>info@tristandeboer.nl</authorEmail
+    <creationDate>19 januari 2018</creationDate>
+    <copyright>Copyright 2018 Tristan de Boer</copyright>
+    <license>Licensed under MIT Licence</license>
     <version>1.0.1</version>
-    <description>Een RSS-feed module voor de verschillende mediabronnen.</description>
+    <description>
+      <img src="../modules/mod_rss_feed/images/logo.png" alt="Scouting Nederland" class="module-thumb" style="float:right" />
+      <h3>Module t.b.v. het plaatsen van de Scouting Copyright</h3>
+      <p></p>
+    </description>
     <files>
         <filename>mod_rss_feed.xml</filename>
         <filename module="mod_rss_feed">mod_rss_feed.php</filename>
         <filename>index.html</filename>
         <filename>helper.php</filename>
-        <filename>tmpl/default.php</filename>
-        <filename>tmpl/index.html</filename>
+        <folder>images</folder>
+        <folder>tmpl</folder>
     </files>
     <config>
 	<fields name="params">
+    <fieldset name="basic">
+      <field name="toppings" label="Databronnen" type="checkboxes">
+        <option value="mailchimp">Facebook</option>
+        <option value="mailchimp">Twitter</option>
+        <option value="mailchimp">Youtube</option>
+        <option value="mailchimp">Mailchimp</option>
+        <option value="mailchimp">Instagram</option>
+        <option value="mailchimp">Flickr</option>
+      </field>
+      <field name="total-feed-number" type="text" label="Totale aantal posts" description="Vul hier het totale aantal posts in." hint="Ongelimiteerd" />
+    </fieldset>
 		<fieldset name="mailchimp" label="Mailchimp">
       <field name="mailchimp-feed" type="text" label="Mailchimp RSS URI" description="Vul hier de RSS feed van je Mailchimp in." />
       <field name="mailchimp-feed-number" type="number" label="Mailchimp RSS Limit" description="Hoeveel berichten wil je maximaal tonen?" default="5" />
